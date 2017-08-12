@@ -1,4 +1,4 @@
 csv/*
 *.pem
 *.db
-
+jira_credentials.yml
