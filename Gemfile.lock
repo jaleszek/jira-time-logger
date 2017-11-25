@@ -11,6 +11,7 @@ GEM
     bcrypt (3.1.11)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
+    coderay (1.1.2)
     concurrent-ruby (1.0.5)
     data_mapper (1.2.0)
       dm-aggregates (~> 1.2.0)
@@ -69,10 +70,14 @@ GEM
       oauth (~> 0.5, >= 0.5.0)
     json (1.8.6)
     json_pure (1.8.6)
+    method_source (0.9.0)
     minitest (5.10.3)
     multi_json (1.12.1)
     multipart-post (2.0.0)
     oauth (0.5.3)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
     public_suffix (2.0.5)
     rake (12.0.0)
     rspec (3.6.0)
@@ -101,8 +106,9 @@ DEPENDENCIES
   data_mapper
   dm-sqlite-adapter
   jira-ruby
+  pry
   rake
   rspec
 
 BUNDLED WITH
-   1.13.6
+   1.16.0

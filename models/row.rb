@@ -2,6 +2,7 @@ class Row
   include CsvRowTimeEntryAssociation
 
   AU_ISSUE_URL_REGEX = /\Ahttps:\/\/.*AU-\d*\z/
+  SAL_ISSUE_URL_REGEX = /\Ahttps:\/\/.*SAL-\d*\z/
   AT_ISSUE_URL_REGEX = /\Ahttps:\/\/.*AT-\d*\z/
   DURATION_REGEX = /\A\d{2}:\d{2}\z/
   LOGGED_AT_REGEX = /\A\d{2}\.\d{2}\.\d{4}\z/
@@ -40,7 +41,7 @@ class Row
 
   def time_entry?
     issue_url.present? &&
-    issue_url =~ AU_ISSUE_URL_REGEX &&
+    (issue_url =~ AU_ISSUE_URL_REGEX || issue_url =~ SAL_ISSUE_URL_REGEX) &&
     duration.present? &&
     duration =~ DURATION_REGEX
   end
